@@ -10,9 +10,9 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
-const Todo = require('./todo/routes/todo.routes');
+const Todo = require('./todoslist/routes/todo.routes');
 
-Todo.todoRoutes(app);
+Todo.TodoRoutes(app);
 
 app.listen(3000,'localhost',()=>{
     console.log('server listening on port %s',3000);
